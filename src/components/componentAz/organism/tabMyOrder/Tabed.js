@@ -43,7 +43,6 @@ class Tabed extends Component {
             activeTabStyle={styles.tabstyle}>
             <CompletedValued
               toDetail={() => this.props.navigation.navigate('DetailOrder')}
-              toChat={() => this.props.navigation.navigate('ChatScreen')}
             />
           </Tab>
         </Tabs>

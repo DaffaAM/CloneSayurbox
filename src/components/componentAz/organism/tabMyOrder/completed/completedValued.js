@@ -35,26 +35,6 @@ class inProgressValued extends Component {
               <Text>Rp 23.500</Text>
             </View>
           </View>
-          <View style={styles.line} />
-          <View style={styles.progress}>
-            <Text style={styles.timeLine}>Timeline Disini</Text>
-            <Button
-              iconLeft
-              bordered
-              light
-              style={styles.button}
-              onPress={this.props.toChat}>
-              <View style={{flexDirection: 'row'}}>
-                <Icon
-                  name="chat"
-                  type="material-icons"
-                  color="#566457"
-                  size={20}
-                />
-                <Text style={{fontSize: 13, color: '#566457'}}>Chat</Text>
-              </View>
-            </Button>
-          </View>
         </CardItem>
       </>
     );

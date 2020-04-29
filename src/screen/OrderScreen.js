@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {View} from 'react-native';
 
 import TabTab from '../components/componentAz/organism/tabMyOrder/Tabed';
 import Header from '../components/Header';

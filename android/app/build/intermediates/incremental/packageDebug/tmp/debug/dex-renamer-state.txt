@@ -1,4 +1,0 @@
-#Wed Apr 29 14:18:15 WIB 2020
-base.0=/home/harkon/Documents/CloneSayurbox/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex

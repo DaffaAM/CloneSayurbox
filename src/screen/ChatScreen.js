@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import {ListItem} from 'react-native-elements';
 
 import FABChat from '../components/componentd/FABChat';
@@ -46,5 +46,3 @@ class ChatScreen extends Component {
 }
 
 export default ChatScreen;
-
-const styles = StyleSheet.create({});

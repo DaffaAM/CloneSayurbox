@@ -127,12 +127,17 @@ class ShopScreen extends Component {
               {/* 1 */}
               {/* <TouchableOpacity> */}
               <MainFeature
-                onPress={() => {}}
+                onPress={() =>
+                  this.props.navigation.navigate('SearchScreen', 'Sayuran')
+                }
                 title="Sayuran"
                 img={require('../assets/assetsF/Icon/wortel.png')}
               />
               {/* </TouchableOpacity> */}
               <MainFeature
+                onPress={() =>
+                  this.props.navigation.navigate('SearchScreen', 'Buah-Buahan')
+                }
                 title="Buah Segar"
                 img={require('../assets/assetsF/Icon/alpukat.png')}
               />

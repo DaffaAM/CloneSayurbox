@@ -1,13 +1,6 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
-import {
-  Container,
-  Header,
-  Content,
-  Footer,
-  FooterTab,
-  Button,
-} from 'native-base';
+import {StyleSheet, Text} from 'react-native';
+import {Footer, FooterTab, Button} from 'native-base';
 
 import {Icon} from 'react-native-elements';
 

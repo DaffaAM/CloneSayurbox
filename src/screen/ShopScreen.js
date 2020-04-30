@@ -246,7 +246,10 @@ class ShopScreen extends Component {
                   harga="25.500"
                   satuan="kg"
                   toDetail={() =>
-                    this.props.navigation.navigate('DetailProduct')
+                    this.props.navigation.navigate('DetailProduct', {
+                      id: 1,
+                      name: 'kiwi',
+                    })
                   }
                 />
                 <MainContent

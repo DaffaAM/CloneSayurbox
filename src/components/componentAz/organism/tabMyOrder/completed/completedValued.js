@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, ScrollView} from 'react-native';
-import {Button, CardItem} from 'native-base';
+import {Text, View, StyleSheet} from 'react-native';
+import {CardItem} from 'native-base';
 import {Icon} from 'react-native-elements';
 
 class inProgressValued extends Component {

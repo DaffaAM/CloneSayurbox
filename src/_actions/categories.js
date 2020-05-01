@@ -5,7 +5,7 @@ export const get_category = () => {
   return {
     type: GET_CATEGORY,
     paylaod: async () => {
-      const res = API.get('/category');
+      const res = await API.get('/category');
       return res.data;
     },
   };

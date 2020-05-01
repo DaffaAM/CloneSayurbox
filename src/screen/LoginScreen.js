@@ -42,10 +42,22 @@ class LoginScreen extends Component {
             onPress={() => this.props.navigation.navigate('ToLoginForm')}>
             <Text style={styles.text}>Masuk Dengan Email</Text>
           </Button>
-
           <Text style={styles.message}>
             We'll never post to Facebook or G+ without your permission.
           </Text>
+          <View style={styles.alignitem}>
+            <View style={styles.registertext}>
+              <Text style={styles.akun}>Belum punya akun?</Text>
+              <Text
+                style={styles.register}
+                onPress={() =>
+                  this.props.navigation.navigate('ToRegisterEmailForm')
+                }>
+                {' '}
+                Register
+              </Text>
+            </View>
+          </View>
           <Text style={styles.appVersion}>App Version 1.0.0</Text>
         </View>
       </ScrollView>
@@ -56,6 +68,20 @@ class LoginScreen extends Component {
 export default LoginScreen;
 
 const styles = StyleSheet.create({
+  alignitem: {
+    alignItems: 'center',
+  },
+  registertext: {
+    flexDirection: 'row',
+  },
+  register: {
+    color: '#438D46',
+    marginTop: 10,
+  },
+  akun: {
+    color: '#566457',
+    marginTop: 10,
+  },
   title: {
     textAlign: 'center',
     fontSize: 15,
@@ -113,7 +139,7 @@ const styles = StyleSheet.create({
     color: '#ABB2AB',
     fontSize: 10,
     textAlign: 'center',
-    marginTop: 16,
+    marginTop: 10,
     marginBottom: 20,
   },
 });

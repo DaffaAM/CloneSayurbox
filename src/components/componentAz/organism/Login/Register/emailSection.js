@@ -33,12 +33,22 @@ export default class register extends Component {
           </Right>
         </Header>
         <View style={styles.container}>
-          <Text>
+          <Text style={styles.mbottom}>
             Buat akun di Sayurbox untuk kemudahan memesan dan memantau order
             Anda
           </Text>
-          <Text style={styles.title}>Email</Text>
-          <TextInput style={styles.input} placeholder="me@email.com" />
+          <View>
+            <Text style={styles.title}>Email</Text>
+            <TextInput style={styles.input} placeholder="me@email.com" />
+          </View>
+          <View>
+            <Text style={styles.title}>Password</Text>
+            <TextInput
+              secureTextEntry
+              style={styles.input}
+              placeholder="******"
+            />
+          </View>
           <Button
             success
             style={{width: '100%', alignSelf: 'center'}}
@@ -62,6 +72,9 @@ export default class register extends Component {
 }
 
 const styles = StyleSheet.create({
+  mbottom: {
+    marginBottom: 10,
+  },
   header: {
     backgroundColor: 'white',
   },
@@ -91,7 +104,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     fontWeight: 'bold',
     color: Colors.PRIMARY,
-    marginTop: 15,
     marginLeft: 5,
   },
 });

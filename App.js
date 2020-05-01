@@ -11,6 +11,7 @@ import InboxScreen from './src/screen/InboxScreen';
 import LoginScreen from './src/screen/LoginScreen';
 import OrderScreen from './src/screen/OrderScreen';
 import ShopScreen from './src/screen/ShopScreen';
+import SearchScreen from './src/screen/SearchScreen';
 import ToLoginForm from './src/components/componentAz/organism/Login/loginForm/loginForm';
 import ToRegisterEmailForm from './src/components/componentAz/organism/Login/Register/emailSection';
 import ToRegisterVerifForm from './src/components/componentAz/organism/Login/Register/verificationSection';
@@ -19,7 +20,6 @@ import DetailOrder from './src/components/componentAz/screen/myOrderDetail/myOrd
 import DetailProduct from './src/components/DetailProduct';
 import All from './src/components/CekAll';
 import SellerScreen from './src/screen/SellerScreen';
-
 
 const ShopScreenStack = createStackNavigator(
   {
@@ -31,6 +31,9 @@ const ShopScreenStack = createStackNavigator(
     },
     All: {
       screen: All,
+    },
+    SearchScreen: {
+      screen: SearchScreen,
     },
   },
   {
@@ -101,7 +104,6 @@ const LoginScreenStack = createStackNavigator(
   },
 );
 
-
 const SellerScreenStack = createStackNavigator(
   {
     SellerScreen: {
@@ -120,7 +122,7 @@ const Router = createBottomTabNavigator(
     InboxScreen: InboxScreenStack,
     ChatScreen: ChatScreenStack,
     LoginScreen: LoginScreenStack,
-    SellerScreen:SellerScreenStack
+    SellerScreen: SellerScreenStack,
   },
   {
     swipeEnabled: true,

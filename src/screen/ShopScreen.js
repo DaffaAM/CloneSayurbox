@@ -6,7 +6,6 @@ import {
   Text,
   Image,
   TextInput,
-  TouchableOpacity,
 } from 'react-native';
 import ImageSlider from 'react-native-image-slider';
 import {Icon} from 'native-base';
@@ -24,7 +23,7 @@ class ShopScreen extends Component {
   render() {
     return (
       <View style={{flex: 1, backgroundColor: Colors.WHITE}}>
-        <StatusBar barStyle='dark-content' backgroundColor="white" />
+        <StatusBar barStyle="dark-content" backgroundColor="white" />
         <View style={{position: 'absolute'}}>
           <BottomSheetOrder />
         </View>
@@ -126,17 +125,19 @@ class ShopScreen extends Component {
                 flexWrap: 'wrap',
               }}>
               {/* 1 */}
-              <TouchableOpacity>
-                
-                 <Image source={require('../assets/assetsF/Icon/wortel.png')} style={{height: 40, width: 50, marginLeft:25, marginRight:10}} />
-                  <Text style={{fontSize: 11,
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  marginTop: 6,
-                  color: '#576357'}}>Sayuran</Text>
-                    
-              </TouchableOpacity>
+              {/* <TouchableOpacity> */}
               <MainFeature
+                onPress={() =>
+                  this.props.navigation.navigate('SearchScreen', 'Sayuran')
+                }
+                title="Sayuran"
+                img={require('../assets/assetsF/Icon/wortel.png')}
+              />
+              {/* </TouchableOpacity> */}
+              <MainFeature
+                onPress={() =>
+                  this.props.navigation.navigate('SearchScreen', 'Buah-Buahan')
+                }
                 title="Buah Segar"
                 img={require('../assets/assetsF/Icon/alpukat.png')}
               />
@@ -245,7 +246,10 @@ class ShopScreen extends Component {
                   harga="25.500"
                   satuan="kg"
                   toDetail={() =>
-                    this.props.navigation.navigate('DetailProduct')
+                    this.props.navigation.navigate('DetailProduct', {
+                      id: 1,
+                      name: 'kiwi',
+                    })
                   }
                 />
                 <MainContent

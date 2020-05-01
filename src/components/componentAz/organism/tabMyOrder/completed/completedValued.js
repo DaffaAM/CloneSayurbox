@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, ScrollView} from 'react-native';
-import {Button, CardItem} from 'native-base';
+import {Text, View, StyleSheet} from 'react-native';
+import {CardItem} from 'native-base';
 import {Icon} from 'react-native-elements';
 
 class inProgressValued extends Component {
@@ -34,26 +34,6 @@ class inProgressValued extends Component {
               <Text style={styles.sectionIn2}>Bill Total</Text>
               <Text>Rp 23.500</Text>
             </View>
-          </View>
-          <View style={styles.line} />
-          <View style={styles.progress}>
-            <Text style={styles.timeLine}>Timeline Disini</Text>
-            <Button
-              iconLeft
-              bordered
-              light
-              style={styles.button}
-              onPress={this.props.toChat}>
-              <View style={{flexDirection: 'row'}}>
-                <Icon
-                  name="chat"
-                  type="material-icons"
-                  color="#566457"
-                  size={20}
-                />
-                <Text style={{fontSize: 13, color: '#566457'}}>Chat</Text>
-              </View>
-            </Button>
           </View>
         </CardItem>
       </>

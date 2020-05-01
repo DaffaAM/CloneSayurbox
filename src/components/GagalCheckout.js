@@ -1,15 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, Image} from 'react-native';
-import {
-  Container,
-  Header,
-  Left,
-  Right,
-  Body,
-  Title,
-  Button,
-  Icon,
-} from 'native-base';
+import {Header, Body, Title} from 'native-base';
 
 class GagalCheckout extends Component {
   render() {

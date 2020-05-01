@@ -13,7 +13,7 @@ class MainFeature extends React.Component {
           marginBottom: 18,
         }}>
         <TouchableOpacity
-          onPress={this.props.toAll}
+          onPress={this.props.onPress}
           style={{
             justifyContent: 'center',
             alignItems: 'center',
@@ -26,8 +26,8 @@ class MainFeature extends React.Component {
             fontWeight: 'bold',
             textAlign: 'center',
             marginTop: 6,
-            color: '#576357'    
-                  }}>
+            color: '#576357',
+          }}>
           {this.props.title}
         </Text>
       </TouchableOpacity>

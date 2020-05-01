@@ -43,7 +43,11 @@ export default class register extends Component {
           </View>
           <View>
             <Text style={styles.title}>Password</Text>
-            <TextInput style={styles.input} placeholder="******" />
+            <TextInput
+              secureTextEntry
+              style={styles.input}
+              placeholder="******"
+            />
           </View>
           <Button
             success

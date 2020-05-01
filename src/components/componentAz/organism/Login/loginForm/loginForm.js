@@ -107,7 +107,7 @@ export default class loginForm extends Component {
                 Ketuk Disini
               </Text>
             </View>
-            <View style={{marginLeft: 25, marginTop: 20, flexDirection: 'row'}}>
+            {/* <View style={{marginLeft: 25, marginTop: 20, flexDirection: 'row'}}>
               <Text style={{color: Colors.FONT_PRIM, marginTop: 5}}>
                 Belum Punya Akun ?
               </Text>
@@ -133,7 +133,7 @@ export default class loginForm extends Component {
                   Daftar
                 </Text>
               </Button>
-            </View>
+            </View> */}
           </View>
         </Container>
       </>

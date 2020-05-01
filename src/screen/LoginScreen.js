@@ -54,7 +54,7 @@ class LoginScreen extends Component {
                   this.props.navigation.navigate('ToRegisterEmailForm')
                 }>
                 {' '}
-                Register
+                Daftar
               </Text>
             </View>
           </View>

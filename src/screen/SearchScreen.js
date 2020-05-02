@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
 import {View, Text, TextInput, Image} from 'react-native';
+import {connect} from 'react-redux';
+import {get_product} from '../_actions/product';
 
 class SearchScreen extends Component {
+  componentDidMount() {
+    this.props.get_product();
+  }
+
   render() {
-    console.log(this.props.navigation.state.params);
+    console.log(this.props.product, 'woiiii');
     return (
       <View>
         <View>
@@ -40,22 +46,61 @@ class SearchScreen extends Component {
             </View>
           </View>
         </View>
+        {this.props.navigation.state.params ? (
+          <View
+            style={{
+              paddingVertical: 15,
+              backgroundColor: 'white',
+              marginTop: 2,
+              marginBottom: 0,
+            }}>
+            <Text style={{fontSize: 26}}>
+              {this.props.navigation.state.params}
+            </Text>
+          </View>
+        ) : null}
         <View
           style={{
-            paddingVertical: 15,
-            backgroundColor: 'white',
-            marginVertical: 2,
+            flexDirection: 'row',
+            flexWrap: 'wrap',
           }}>
-          <Text style={{fontSize: 26}}>
-            {this.props.navigation.state.params}
-          </Text>
-        </View>
-        <View style={{flexDirection: 'row'}}>
           {/* insert Product as Category*/}
+          {this.props?.product?.loading ? (
+            <Text>Loading..</Text>
+          ) : (
+            this.props.product.data.data.data.map((value, i) => (
+              <View
+                key={i}
+                style={{
+                  backgroundColor: 'white',
+                  width: '50%',
+                  height: '50%',
+                  marginHorizontal: -1,
+                  marginVertical: 1,
+                }}>
+                <Text>Woi</Text>
+              </View>
+            ))
+          )}
         </View>
       </View>
     );
   }
 }
 
-export default SearchScreen;
+const mapStateToProps = state => {
+  return {
+    product: state.product,
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    get_product: () => dispatch(get_product()),
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(SearchScreen);

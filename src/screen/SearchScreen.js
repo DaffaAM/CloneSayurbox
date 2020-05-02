@@ -3,6 +3,8 @@ import {View, Text, TextInput, Image} from 'react-native';
 import {connect} from 'react-redux';
 import {get_product} from '../_actions/product';
 
+import MainContent from '../components/molecules/SearchProductCard/index';
+
 class SearchScreen extends Component {
   componentDidMount() {
     this.props.get_product();
@@ -73,12 +75,14 @@ class SearchScreen extends Component {
                 key={i}
                 style={{
                   backgroundColor: 'white',
-                  width: '50%',
-                  height: '50%',
-                  marginHorizontal: -1,
+                  width: '49%',
+                  height: 280,
+                  marginHorizontal: 1,
                   marginVertical: 1,
                 }}>
-                <Text>Woi</Text>
+                <MainContent
+                  img={`http://192.168.43.94:5000/product/${value.image}`}
+                />
               </View>
             ))
           )}
